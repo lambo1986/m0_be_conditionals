@@ -20,3 +20,19 @@ elsif (int % 3 != 0) && (int % 5 != 0) == true
 end
 
 #It was tricky to get the "FizzBuzz" to print! 
+
+
+#cleaner version
+
+print "Please enter integer:"
+int = gets.chomp.to_i
+if int % 3 == 0 && int % 5 != 0 
+    print "Fizz"
+elsif int % 5 == 0 && int % 3 != 0 
+    print "Buzz"
+elsif int % 3 == 0 && int % 5 == 0
+    print "FizzBuzz"
+elsif int % 3 != 0 && int % 5 != 0
+    print int
+end
+
