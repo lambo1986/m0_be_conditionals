@@ -17,11 +17,13 @@ they need to have someone else sign for the rental
 =end
 
 good_driving_record = true
-age = 24
+age = gets.chomp.to_i
 if good_driving_record == true && age > 25
     print "Discount on car rental available."
 elsif good_driving_record == true || age > 25
     print "Please pay full price for rental."
 elsif good_driving_record == false && age <=25
     print "Rental request denied, must have clean record and meet age requirements."
+elsif good_driving_record == (true || !true) && age < 16
+    print "You are not old enough to even drive!"
 end
